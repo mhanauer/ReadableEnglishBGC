@@ -12,11 +12,12 @@ setwd("~/Google Drive/PARCS/Projects/Reading/ReadingBGC")
 dataReading = read.csv("ReadableBGC.csv")
 head(dataReading)
 t.test(dataReading$diff)
-t.test(dataReading$diff, dataReading$Group)
+t.test(dataReading$diff~dataReading$Group)
 library(MASS)
 install.packages("exactRankTests")
 library(exactRankTests)
 wilcox.exact(dataReading$diff)
-wilcox.exact(dataReading$diff, dataReading$Group)
+wilcox.exact(dataReading$diff~dataReading$Group)
+4.3125- 4.2500 
 ```
 
